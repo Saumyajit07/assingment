@@ -1,0 +1,14 @@
+version: '3'
+services:
+  web:
+    # command: /bin/sh -c "/app/runWebServer.sh"
+    volumes:
+      - .:/app
+    build:
+      context: .
+      target: builder
+    ports: 
+      - '8000:8000'
+
+volumes:
+  db-data:
